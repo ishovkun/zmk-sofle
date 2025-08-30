@@ -24,10 +24,24 @@ jobs:
       - name: Checkout config
         uses: actions/checkout@v4
 
-      - name: Substitute PASSWORD_MACRO
+      # - name: Substitute PASSWORD_MACRO
+      #   run: |
+      #     sed -i "s|\${PASSWORD_MACRO}|${{ secrets.PASSWORD_MACRO }}|g" config/eyelash_sofle.keymap
+      #     cat config/eyelash_sofle.keymap
+      - name: Substitute PASSWORD_MACRO (python)
+        env:
+          PASSWORD_MACRO: ${{ secrets.PASSWORD_MACRO }}
         run: |
-          sed -i "s|\${PASSWORD_MACRO}|${{ secrets.PASSWORD_MACRO }}|g" config/eyelash_sofle.keymap
-          cat config/eyelash_sofle.keymap
+          python - <<'PY'
+import os
+p = os.environ['PASSWORD_MACRO']
+path = "config/eyelash_sofle.keymap"
+with open(path, "r", encoding="utf-8") as f:
+  s = f.read()
+s = s.replace("${PASSWORD_MACRO}", p)
+with open(path, "w", encoding="utf-8") as f:
+  f.write(s)
+PY
 
       - name: Upload repo
         uses: actions/upload-artifact@v4
