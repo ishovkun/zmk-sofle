@@ -35,6 +35,7 @@ jobs:
         run: |
           perl -0777 -pe 's/\$\{PASSWORD_MACRO\}/$ENV{PASSWORD_MACRO}/g' config/eyelash_sofle.keymap > config/eyelash_sofle.keymap.tmp
           mv config/eyelash_sofle.keymap.tmp config/eyelash_sofle.keymap
+          cat config/eyelash_sofle.keymap
 
       - name: Upload repo
         uses: actions/upload-artifact@v4
