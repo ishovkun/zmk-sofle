@@ -45,7 +45,7 @@
     };
 
     behaviors {
-        macro_password: macro {
+        mac_pwd: macro {
             compatible = "zmk,behavior-macro";
             label = "PASSWORD_MACRO";
             #binding-cells = <0>;
@@ -73,8 +73,6 @@
 &kp CAPS    &kp A      &kp S         &kp D         &kp F    &kp G        &mmv MOVE_LEFT              &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V    &kp B        &mmv MOVE_RIGHT             &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
 &kp C_MUTE  &kp LCTRL  LALT_PIPE     LGUI_RBRA     LCTR_ESC L1_SPC       &mkp LCLK        L1_SPC     LCTR_ESC   &kp RGUI   LALT_DASH  &kp EQUAL
-/* &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &mkp LCLK        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE */
-/* &kp C_MUTE  &kp LCTRL  LALT_PIPE     LGUI_RBRA     LCTR_ESC L1_SPC       &mkp LCLK        &kp L1_SPC LCTR_ESC   &kp RGUI   &kp RIGHT_SHIFT  &kp DELETE */
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -87,7 +85,7 @@
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
 &trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp C_MUTE  &mac_pwd           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
