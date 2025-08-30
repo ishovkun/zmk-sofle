@@ -51,7 +51,7 @@
             label = "PASSWORD_MACRO";
             #binding-cells = <0>;
             bindings = <
-${PASSWORD_MACRO}
+${PASSWORD}
             >;
         };
     };

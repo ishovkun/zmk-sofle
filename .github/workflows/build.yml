@@ -34,8 +34,7 @@ jobs:
           # PASSWORD_MACRO: ${{ secrets.PASSWORD_MACRO }}
           PASSWORD_MACRO: "&kp LS(O) &kp G &kp I &kp R &kp N3 &kp N1 &kp N4 &kp N1 &kp N5 &kp MINUS"
         run: |
-          # perl -0777 -pe 's/\$\{PASSWORD_MACRO\}/$ENV{PASSWORD_MACRO}/g' config/eyelash_sofle.keymap > config/eyelash_sofle.keymap.tmp
-          perl -0777 -pe "s/\\$\\{PASSWORD_MACRO\\}/$ENV{PASSWORD_MACRO}/g" config/eyelash_sofle.keymap > config/eyelash_sofle.keymap.tmp
+          perl -0777 -pe 's/\$\{PASSWORD\}/$ENV{PASSWORD_MACRO}/g' config/eyelash_sofle.keymap > config/eyelash_sofle.keymap.tmp
           mv config/eyelash_sofle.keymap.tmp config/eyelash_sofle.keymap
           cat config/eyelash_sofle.keymap
 
