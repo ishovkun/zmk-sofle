@@ -44,6 +44,25 @@
         tap-ms = <100>;
     };
 
+    behaviors {
+        macro_password: macro {
+            compatible = "zmk,behavior-macro";
+            label = "PASSWORD_MACRO";
+            #binding-cells = <0>;
+            bindings = <
+                &kp P
+                &kp A
+                &kp S
+                &kp S
+                &kp W
+                &kp O
+                &kp R
+                &kp D
+                &kp ENTER
+            >;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
