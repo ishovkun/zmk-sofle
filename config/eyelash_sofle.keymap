@@ -51,8 +51,7 @@
             label = "PASSWORD_MACRO";
             #binding-cells = <0>;
             bindings = <
-${PASSWORD}
-// &kp LS(O) &kp G &kp I &kp R &kp N3 &kp N1 &kp N4 &kp N1 &kp N5 &kp MINUS
+&kp LS(O) &kp G &kp I &kp R &kp N3 &kp N1 &kp N4 &kp N1 &kp N5 &kp MINUS &kp MINUS &kp MINUS &kp ENTER
             >;
         };
     };
