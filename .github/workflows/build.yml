@@ -1,3 +1,15 @@
+# name: Build ZMK firmware
+# on:
+#   workflow_dispatch:
+#   push:
+#     paths-ignore:
+#       - "keymap-drawer/**"
+
+# jobs:
+#   build:
+#     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+
 name: Build ZMK firmware
 on:
   workflow_dispatch:
@@ -6,6 +18,25 @@ on:
       - "keymap-drawer/**"
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout config
+        uses: actions/checkout@v4
 
+      - name: Substitute PASSWORD_MACRO
+        run: |
+          sed -i "s|\${PASSWORD_MACRO}|${{ secrets.PASSWORD_MACRO }}|g" config/keymap.keymap
+
+      - name: Upload prepared config
+        uses: actions/upload-artifact@v4
+        with:
+          name: config
+          path: config
+
+  build:
+    needs: prepare
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config-path: config
+    secrets: inherit
