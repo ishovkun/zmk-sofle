@@ -13,10 +13,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define LALT_PIPE &mt LALT BSLH
-#define LALT_DASH &mt LALT MINUS
+#define LALT_MINUS &mt LALT MINUS
 #define LGUI_RBRA &mt LGUI RBKT
 #define LCTR_ESC  &mt LCTRL ESC
 #define L1_SPC    &lt 1 SPACE
+#define RSHIFT_ENT &mt RSHIFT ENTER
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -68,15 +69,15 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4   &kp N5       &mmv MOVE_UP                &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R    &kp T        &mmv MOVE_DOWN              &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+&kp GRAVE   &kp N1     &kp N2        &kp N3        &kp N4   &kp N5       &mmv MOVE_UP                &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&kp TAB     &kp Q      &kp W         &kp E         &kp R    &kp T        &mmv MOVE_DOWN              &kp Y      &kp U      &kp I      &kp O            &kp P       &kp RBKT
 &kp CAPS    &kp A      &kp S         &kp D         &kp F    &kp G        &mmv MOVE_LEFT              &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V    &kp B        &mmv MOVE_RIGHT             &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  LALT_PIPE     LGUI_RBRA     LCTR_ESC L1_SPC       &mkp LCLK        L1_SPC     LCTR_ESC   &kp RGUI   LALT_DASH  &kp EQUAL
+&kp LSHFT   &kp Z      &kp X         &kp C         &kp V    &kp B        &mmv MOVE_RIGHT             &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RSHIFT_ENT
+&kp C_MUTE  &kp LCTRL  LALT_PIPE     LGUI_RBRA     LCTR_ESC L1_SPC       &mkp LCLK        L1_SPC     LCTR_ESC   &kp RGUI   LALT_MINUS &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "layer0";
         };
 
         layer_1 {
