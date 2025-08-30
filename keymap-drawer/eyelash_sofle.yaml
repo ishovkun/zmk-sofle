@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
-  - $$mdi:apple-keyboard-option$$
+  - {t: ']', h: LGUI, s: '}'}
   - layer1
   - $$mdi:keyboard-space$$
   - $$mdi:mouse-left-click-outline$$
