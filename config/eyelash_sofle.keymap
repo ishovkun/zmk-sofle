@@ -52,7 +52,8 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R    &kp T        &mmv MOVE_DOWN   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 &kp CAPS    &kp A      &kp S         &kp D         &kp F    &kp G        &mmv MOVE_LEFT   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V    &kp B        &mmv MOVE_RIGHT  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &mkp LCLK        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp C_MUTE  &kp LCTRL  LALT_PIPE  &kp LEFT_ALT  &mo 1   &kp SPACE    &mkp LCLK        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+/* &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &mkp LCLK        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE */
 /* &kp C_MUTE  &kp LCTRL  LALT_PIPE     LGUI_RBRA     LCTR_ESC L1_SPC       &mkp LCLK        &kp L1_SPC LCTR_ESC   &kp RGUI   &kp RIGHT_SHIFT  &kp DELETE */
             >;
 
