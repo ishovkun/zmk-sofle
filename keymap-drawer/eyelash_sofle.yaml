@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  layer0:
+  Default layer:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -58,14 +58,14 @@ layers:
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
   - {t: ']', h: LGUI, s: '}'}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:keyboard-space$$', h: layer1}
+  - {t: '$$mdi:keyboard-space$$', h: Navigation layer}
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:keyboard-space$$', h: layer1}
+  - {t: '$$mdi:keyboard-space$$', h: Navigation layer}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
   - RGUI
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
   - {t: '=', s: +}
-  layer1:
+  Navigation layer:
   - Gui+$$mdi:arrow-up-bold$$
   - F1
   - F2
