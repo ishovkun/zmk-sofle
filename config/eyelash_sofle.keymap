@@ -48,7 +48,7 @@
     behaviors {
         slb_pwd: macro {
             compatible = "zmk,behavior-macro";
-            label = "PASSWORD_MACRO";
+            label = "SLB_PASSWORD_MACRO";
             #binding-cells = <0>;
             bindings = <
 &kp LS(O) &kp G &kp I &kp R &kp N3 &kp N1 &kp N4 &kp MINUS &kp MINUS &kp MINUS &kp ENTER
