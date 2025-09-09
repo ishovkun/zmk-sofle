@@ -55,7 +55,7 @@
             >;
         };
 
-        mac_pwd: macro {
+        mac_pwd: macro2 {
             compatible = "zmk,behavior-macro";
             label = "PASSWORD_MACRO";
             #binding-cells = <0>;
