@@ -118,7 +118,7 @@ layers:
   - END
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&slb_pwd'
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&mac_pwd'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
